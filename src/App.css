@@ -1,38 +1,174 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainWhite: #F2EEF7;
+  --serenity: #A3A3B7;
+  --mainBlack: #222;
+  --roseRed: #FF2768;
+  --hover: rgb(245, 9, 80);
+  --charcoal: #1B4A56;
+  --mainTransition: all 0.5s linear;
+  --mainSpacing: 3px;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+/* globals**/
+
+body {
+  
+  color: var(--mainBlack);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-primary{
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainWhite);
+  background: var(--charcoal);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--charcoal);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+
+.btn-primary:hover{
+background-color: transparent;
+}
+
+/* header */
+
+header {
+  padding-top: 2em;
+  color: var(--mainWhite);
+  background-color: #6f7287;
+  background: linear-gradient(to bottom, #6f7287c4, #6f72873b), url(./images/bgc6.jpg);
+  min-height: 100vh;
+  background-size: cover;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  color: var(--mainWhite);
+  margin-bottom: 1.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header .roseRed {
+  color: var(--roseRed);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header .navbar {
+   border-top: 1px solid var(--mainWhite);
+   border-bottom: 1px solid var(--mainWhite);
+   width: 100%;
+   z-index: 1;
+   transition: background-color 0.3s linear;
+   -webkit-transition: background-color 0.3s linear;
+   -moz-transition: background-color 0.3s linear;
+   -ms-transition: background-color 0.3s linear;
+   -o-transition: background-color 0.3s linear;
+}
+
+header .sticky {
+  position: fixed;
+  top: 0;
+  
+  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--mainBlack);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+header div{
+  display: inline-block;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header ul{
+  display: inline-block;
+  transition: var(--mainTransition);
+  
 }
+
+ul li{
+  list-style-type: none;
+}
+
+header .logo {
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  font-size: 0px;
+   transition: var(--mainTransition);
+  -webkit-transition: var(--mainTransition);
+  -moz-transition: var(--mainTransition);
+  -ms-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition); 
+}
+
+
+
+header .nav-logo{
+  width: initial;
+  height: initial;
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+  overflow: visible;
+  font-size: 2em;
+  
+}
+
+
+header ul .nav-links {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+
+li.nav-links+li.nav-links {
+  margin-left: 4.5em;
+}
+
+li.nav-links:nth-of-type(1) {
+  color: var(--roseRed);
+}
+li.nav-links:nth-of-type(4){
+  margin-right: 3em;
+}
+
+header .catchPhrase{
+  font-size: 1.2em;
+  width: 70%;
+  margin: 5em auto 7em;
+  max-width: 48em;
+  font-weight: lighter;
+}
+
+.header-btn{
+  padding: 15px;
+  background-color: var(--roseRed);
+}
+
+
