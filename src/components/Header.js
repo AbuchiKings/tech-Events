@@ -73,16 +73,6 @@ class Header extends Component {
                         <a className="btn-primary" href="">Get Started</a>
                     </div>
                 </header>
-                <div>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi esse accusamus porro delectus, laborum architecto temporibus. Impedit, rerum deserunt accusantium, ipsum qui dolor quidem repudiandae nulla, aut nihil quae deleniti.
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi esse accusamus porro delectus, laborum architecto temporibus. Impedit, rerum deserunt accusantium, ipsum qui dolor quidem repudiandae nulla, aut nihil quae deleniti.
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi esse accusamus porro delectus, laborum architecto temporibus. Impedit, rerum deserunt accusantium, ipsum qui dolor quidem repudiandae nulla, aut nihil quae deleniti.
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi esse accusamus porro delectus, laborum architecto temporibus. Impedit, rerum deserunt accusantium, ipsum qui dolor quidem repudiandae nulla, aut nihil quae deleniti.
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi esse accusamus porro delectus, laborum architecto temporibus. Impedit, rerum deserunt accusantium, ipsum qui dolor quidem repudiandae nulla, aut nihil quae deleniti.
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi esse accusamus porro delectus, laborum architecto temporibus. Impedit, rerum deserunt accusantium, ipsum qui dolor quidem repudiandae nulla, aut nihil quae deleniti.
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi esse accusamus porro delectus, laborum architecto temporibus. Impedit, rerum deserunt accusantium, ipsum qui dolor quidem repudiandae nulla, aut nihil quae deleniti.
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi esse accusamus porro delectus, laborum architecto temporibus. Impedit, rerum deserunt accusantium, ipsum qui dolor quidem repudiandae nulla, aut nihil quae deleniti.
-        </div>
             </>
         )
     }
