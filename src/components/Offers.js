@@ -2,8 +2,8 @@ import React from 'react';
 import Title from './Title';
 import { GoBroadcast } from "react-icons/go";
 import { FaCoins } from "react-icons/fa";
-import { FaFlag } from "react-icons/fa";
 import { TiDeviceDesktop } from "react-icons/ti";
+import { Link } from 'react-router-dom';
 
 function Offers() {
 
@@ -62,7 +62,7 @@ function Offers() {
                 <p>
                     With our ulimited connection, you get access to millions of potential attendeeees.
                     Not just anybody, but the target aundience that are most relevant to you. We have
-                    perfected the technology of targeted marketing. <a href="">Get started</a> today
+                    perfected the technology of targeted marketing. <Link to="/">Get started</Link> today
                     and take advatage of these amazing offers.
                 </p>
             </div>

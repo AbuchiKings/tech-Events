@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { NavLink, Link } from 'react-router-dom';
+ import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
     state = {
@@ -42,23 +42,23 @@ class Header extends Component {
 
                             <p className={this.props.displayNav ||
                                 this.state.dispElements ? "nav-logo logo" : "logo"}>
-                                <a href="">tech<span className="roseRed">Events</span></a>
+                                <NavLink exact to="/">tech<span className="roseRed">Events</span></NavLink>
                             </p>
                         </div>
 
                         <ul>
 
                             <li className="nav-links">
-                                <a href="">Home</a>
+                                <NavLink to="/" activeClassName="active">Home</NavLink>
                             </li>
                             <li className="nav-links">
-                                <a href="">Events</a>
+                                <NavLink to="/events" activeClassName="active">Events</NavLink>
                             </li>
                             <li className="nav-links">
-                                <a href="">Create Event</a>
+                                <NavLink to="/create-event" activeClassName="active">Create Event</NavLink>
                             </li>
                             <li className="nav-links">
-                                <a href="">Sign In</a>
+                                <NavLink to="/" activeClassName="active">Sign In</NavLink>
                             </li>
 
                         </ul>
@@ -70,7 +70,7 @@ class Header extends Component {
                     </p>
 
 
-                        <a className="btn-primary" href="">Get Started</a>
+                        <NavLink className="btn-primary" to="">Get Started</NavLink>
                     </div>
                 </header>
             </>
