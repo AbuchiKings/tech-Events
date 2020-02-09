@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaBeer } from 'react-icons/fa';
+import { FaBeer, FaFacebook, } from 'react-icons/fa';
+import {  } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -33,7 +34,7 @@ function Footer() {
 
                     <h6 className="follow-us">Follow us</h6>
                 <ul>
-                    <li><Link to="/"><FaBeer/></Link></li>
+                    <li><Link to="/"><FaFacebook/></Link></li>
                     <li><Link to="/"><FaBeer/></Link></li>
                     <li><Link to="/"><FaBeer/></Link></li>
                     <li><Link to="/"><FaBeer/></Link></li>

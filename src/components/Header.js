@@ -58,7 +58,7 @@ class Header extends Component {
                                 <NavLink to="/create-event" activeClassName="active">Create Event</NavLink>
                             </li>
                             <li className="nav-links">
-                                <NavLink to="/" activeClassName="active">Sign In</NavLink>
+                                <NavLink to="/auth/login" activeClassName="active">Sign In</NavLink>
                             </li>
 
                         </ul>
