@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
- import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { FaAlignJustify } from 'react-icons/fa';
+
 
 class Header extends Component {
     state = {
@@ -44,6 +46,10 @@ class Header extends Component {
                                 this.state.dispElements ? "nav-logo logo" : "logo"}>
                                 <NavLink exact to="/">tech<span className="roseRed">Events</span></NavLink>
                             </p>
+                            <button>
+                                <FaAlignJustify />
+                            </button>
+
                         </div>
 
                         <ul>

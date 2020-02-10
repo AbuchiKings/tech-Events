@@ -59,11 +59,11 @@ h6 {
 
 a {
   text-decoration: none;
-  color: rgb(55, 142, 240);
+  color: white;
 }
-a:hover{
+
+a:hover {
   text-decoration: underline;
-  
 }
 
 .btn-primary {
@@ -90,6 +90,7 @@ header {
   color: var(--mainWhite);
   background-color: #6f7287;
   background: linear-gradient(to bottom, #6f7287c4, #6f72873b), url(./images/bgc6.jpg);
+  background-attachment: fixed;
   min-height: 100vh;
   background-size: cover;
   text-align: center;
@@ -163,6 +164,14 @@ header .nav-logo {
   font-size: 2em;
 }
 
+header .nav-logo a {
+  color: white;
+}
+
+header .nav-logo a:hover {
+  text-decoration: none;
+}
+
 header ul .nav-links {
   display: inline-block;
   padding: 5px 10px;
@@ -180,16 +189,15 @@ li.nav-links:nth-of-type(4) {
   margin-right: 3em;
 }
 
-header ul .nav-links a{
+header ul .nav-links a {
   color: white;
 }
 
-header ul .nav-links a:hover{
+header ul .nav-links a:hover {
   text-decoration: underline;
 }
 
-header .nav-links 
-.active{
+header .nav-links .active {
   color: var(--roseRed)
 }
 
@@ -295,6 +303,11 @@ header .catchPhrase {
   font-size: 1.4em;
 }
 
+.offers-text a {
+  text-decoration: none;
+  color: rgb(55, 142, 240);
+}
+
 .offers-text a:hover {
   text-decoration: underline;
 }
@@ -305,11 +318,11 @@ header .catchPhrase {
   margin: auto 0;
   background: url(./images/bgc3.jpg);
   background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
-  padding: 0 30px;
   width: 100%;
-  color: var(--charcoal)
+  color: var(--mainBlack);
 }
 
 div.form-wrapper {
@@ -319,7 +332,7 @@ div.form-wrapper {
   background-color: #fff;
   padding: 10px;
   margin-right: auto;
-  margin-left: 10em;
+  margin-left: 12em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -329,12 +342,19 @@ div.form-wrapper {
 div.form-section>h1, div.form-section>p {
   text-align: center;
 }
+div.form-wrapper a {
+  text-decoration: none;
+  color: rgb(55, 142, 240);
+}
+
+div.form-section> p a:hover{
+  text-decoration: underline;
+}
 
 div.form-section>h1 {
   margin-top: 1.5em;
   font-size: 1.8em;
   letter-spacing: 2px;
-  color: var(--roseRed)
 }
 
 .form-footer {
@@ -361,6 +381,7 @@ small.copyright {
   font-size: 0.85em;
   text-align: center;
   padding-bottom: 0.7em;
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 small a {
@@ -368,11 +389,17 @@ small a {
 }
 
 small a:hover {
-  color: var(--serenity);
   text-decoration: underline;
 }
 
+@media(max-width: 768px){
+  div.form-wrapper{
+    margin: 0 auto;
+  }
+}
 /*AuthPage Login**/
+
+
 
 div.login-center {
   margin-top: 3em;
@@ -401,6 +428,7 @@ div.login-center {
 .input-grp input:hover {
   border-bottom-color: rgb(200, 200, 200);
 }
+
 .input-grp input:focus {
   outline: none;
   box-shadow: rgb(55, 142, 240) 0px 1px 0px;
@@ -416,7 +444,7 @@ div.login-center {
 }
 
 .login-btn:hover {
-  color: black;
+  color: var(--mainBlack);
 }
 
 /* Footer**/
@@ -424,7 +452,7 @@ div.login-center {
 footer {
   background-color: var(--charcoal);
   padding: 8em 0;
-  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 footer .flex-container {
