@@ -1,67 +1,155 @@
-import React, { Component } from 'react'
 
-export default class Navbar extends Component {
-
-    state = {
-        dispElements: false
-    };
-    navRef = React.createRef();
+import React from 'react'
+import { NavLink } from 'react-router-dom';
+import { FaAlignJustify } from 'react-icons/fa';
+import { useState, useRef, useEffect } from 'react';
 
 
+export default function Navbar(props) {
+    const [displayAppName, setDisplayAppName] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
 
-    componentDidMount() {
-        console.log(this);
-        var navbar = this.navRef.current;
-        var sticky = this.navRef.current.offsetTop;
+    const navRef = useRef(null);
 
-        const stickyNavbar = () => {
-            console.log(sticky);
-            if (window.pageYOffset >= sticky) {
+    const stickyNavbar = () => {
+        const navbar = navRef.current;
+        if (navbar) {
+            let navOffsetTop = navRef.current.offsetTop;
+            if (window.pageYOffset > navOffsetTop) {
                 navbar.classList.add("sticky");
-                this.setState({ dispElements: true });
+                setDisplayAppName(true);
             } else {
                 navbar.classList.remove("sticky");
-                this.setState({ dispElements: false });
+                setDisplayAppName(false);
 
             }
-
         }
-        window.addEventListener('scroll', stickyNavbar);
 
     }
 
+    useEffect(() => {
+        window.addEventListener('scroll', stickyNavbar);
+        return () => {
+            window.removeEventListener('scroll', stickyNavbar)
+        }
+    }, [])
 
-    render() {
+    const handleToggle = () => {
+        
+        setIsOpen(!isOpen)
+    }
 
-        return (
-            <nav className="navbar" >
+    return (
+        <nav className="navbar" ref={navRef}>
+            <div className="nav-header">
 
-                <p className={this.props.displayNav ? "nav-logo logo" : "logo"}>
-                    <a href="">tech<span className="roseRed">Events</span></a>
+                <p className={props.displayNav ||
+                    displayAppName ? "nav-logo logo" : "logo"}>
+                    <NavLink exact to="/">tech<span className="roseRed">Events</span></NavLink>
                 </p>
+                <button type="button" className="nav-btn"  onClick={handleToggle}>
+                    <FaAlignJustify className="nav-icon" />
+                </button>
 
-
-
+            </div>
+            <div  className={isOpen ?
+                        "nav-div show-nav" : "nav-div"}>
                 <ul>
 
                     <li className="nav-links">
-                        <a href="">Home</a>
+                        <NavLink to="/" activeClassName="active">Home</NavLink>
                     </li>
                     <li className="nav-links">
-                        <a href="">Events</a>
+                        <NavLink to="/events" activeClassName="active">Events</NavLink>
                     </li>
                     <li className="nav-links">
-                        <a href="">Create Event</a>
+                        <NavLink to="/create-event" activeClassName="active">Create Event</NavLink>
                     </li>
                     <li className="nav-links">
-                        <a href="">Sign In</a>
+                        <NavLink to="/auth/login" activeClassName="active">Sign In</NavLink>
                     </li>
 
                 </ul>
+            </div>
 
+        </nav>
+    )
 
-
-            </nav>
-        )
-    }
 }
+
+
+
+
+// import React, { Component } from 'react'
+// import { NavLink } from 'react-router-dom';
+// import { FaAlignJustify } from 'react-icons/fa';
+
+
+// export default class Navbar extends Component {
+
+//     state = {
+//         dispElements: false
+//     };
+//     navRef = React.createRef();
+
+
+
+//     componentDidMount() {
+//         console.log(this);
+//         var navbar = this.navRef.current;
+//         var sticky = this.navRef.current.offsetTop;
+
+//         const stickyNavbar = () => {
+//             console.log(sticky);
+//             if (window.pageYOffset >= sticky) {
+//                 navbar.classList.add("sticky");
+//                 this.setState({ dispElements: true });
+//             } else {
+//                 navbar.classList.remove("sticky");
+//                 this.setState({ dispElements: false });
+
+//             }
+
+//         }
+//         window.addEventListener('scroll', stickyNavbar);
+
+//     }
+
+
+//     render() {
+
+//         return (
+//             <nav className="navbar" ref={this.navRef}>
+//                 <div>
+
+//                     <p className={this.props.displayNav ||
+//                         this.state.dispElements ? "nav-logo logo" : "logo"}>
+//                         <NavLink exact to="/">tech<span className="roseRed">Events</span></NavLink>
+//                     </p>
+//                     <button>
+//                         <FaAlignJustify />
+//                     </button>
+
+//                 </div>
+
+//                 <ul>
+
+//                     <li className="nav-links">
+//                         <NavLink to="/" activeClassName="active">Home</NavLink>
+//                     </li>
+//                     <li className="nav-links">
+//                         <NavLink to="/events" activeClassName="active">Events</NavLink>
+//                     </li>
+//                     <li className="nav-links">
+//                         <NavLink to="/create-event" activeClassName="active">Create Event</NavLink>
+//                     </li>
+//                     <li className="nav-links">
+//                         <NavLink to="/auth/login" activeClassName="active">Sign In</NavLink>
+//                     </li>
+
+//                 </ul>
+//             </nav>
+//         )
+//     }
+// }
+

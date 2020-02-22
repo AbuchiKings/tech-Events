@@ -37,7 +37,7 @@ function Offers() {
 
     return (
         <section className="offers-section">
-            <Title title="What we will help you with" />
+            <Title title="What we offer" />
             <div className="offers-center">
                 {offers.map((item, i) => {
                     return (
@@ -60,7 +60,7 @@ function Offers() {
             <div className="offers-text">
                 <h3>Why us?</h3>
                 <p>
-                    With our ulimited connection, you get access to millions of potential attendeeees.
+                    With our ulimited connection, you get access to millions of potential attendees.
                     Not just anybody, but the target aundience that are most relevant to you. We have
                     perfected the technology of targeted marketing. <Link to="/">Get started</Link> today
                     and take advatage of these amazing offers.

@@ -8,7 +8,7 @@ function Footer() {
         <footer>
             <div className="flex-container">
                 <div className="footer-about">
-                    <h5>About <Link>tech<span>Events</span></Link></h5>
+                    <h5>About <Link to="/">tech<span>Events</span></Link></h5>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Tempore libero, dolor vitae, deserunt quod illo provident

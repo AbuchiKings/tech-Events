@@ -2,7 +2,6 @@ import React from 'react';
 import Login from './../components/Login';
 import { Link, Switch, Route, Redirect } from 'react-router-dom';
 import SignUp from './../components/SignUp';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 function AuthPage(props) {
     console.log(props.location.pathname)

@@ -27,6 +27,10 @@ body {
   line-height: 1.4;
 }
 
+ul li {
+  list-style-type: none;
+}
+
 h1 {
   font-size: 3em;
   line-height: 1;
@@ -71,9 +75,9 @@ a:hover {
   text-decoration: none;
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);
-  background: var(--charcoal);
+  background: var(--roseRed);
   padding: 0.4rem 0.9rem;
-  border: 3px solid var(--charcoal);
+  border: 3px solid var(--roseRed);
   transition: var(--mainTransition);
   cursor: pointer;
 }
@@ -102,103 +106,9 @@ header h1 {
   margin-bottom: 1.5em;
 }
 
-header .roseRed {
+.roseRed {
   color: var(--roseRed);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
-}
-
-header .navbar {
-  border-top: 1px solid var(--mainWhite);
-  border-bottom: 1px solid var(--mainWhite);
-  width: 100%;
-  font-size: 1.2em;
-  z-index: 1;
-  transition: background-color 0.3s linear;
-  -webkit-transition: background-color 0.3s linear;
-  -moz-transition: background-color 0.3s linear;
-  -ms-transition: background-color 0.3s linear;
-  -o-transition: background-color 0.3s linear;
-}
-
-header .sticky {
-  position: fixed;
-  top: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: var(--mainBlack);
-  display: flex;
-  justify-content: space-between;
-}
-
-header div {
-  display: inline-block;
-}
-
-header ul {
-  display: inline-block;
-  transition: var(--mainTransition);
-}
-
-ul li {
-  list-style-type: none;
-}
-
-header .logo {
-  display: inline-block;
-  width: 1px;
-  height: 1px;
-  font-size: 0px;
-  transition: var(--mainTransition);
-  -webkit-transition: var(--mainTransition);
-  -moz-transition: var(--mainTransition);
-  -ms-transition: var(--mainTransition);
-  -o-transition: var(--mainTransition);
-}
-
-header .nav-logo {
-  width: initial;
-  height: initial;
-  display: inline-block;
-  padding: 0px 20px 0px 20px;
-  overflow: visible;
-  font-size: 2em;
-}
-
-header .nav-logo a {
-  color: white;
-}
-
-header .nav-logo a:hover {
-  text-decoration: none;
-}
-
-header ul .nav-links {
-  display: inline-block;
-  padding: 5px 10px;
-}
-
-li.nav-links+li.nav-links {
-  margin-left: 4.5em;
-}
-
-li.nav-links:nth-of-type(1) {
-  color: var(--roseRed);
-}
-
-li.nav-links:nth-of-type(4) {
-  margin-right: 3em;
-}
-
-header ul .nav-links a {
-  color: white;
-}
-
-header ul .nav-links a:hover {
-  text-decoration: underline;
-}
-
-header .nav-links .active {
-  color: var(--roseRed)
 }
 
 header .catchPhrase {
@@ -212,6 +122,153 @@ header .catchPhrase {
 .header-btn {
   padding: 15px;
   background-color: var(--roseRed);
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    display: none;
+  }
+  header .catchPhrase {
+    font-size: 1.3em;
+    width: 90%;
+    margin: 5em auto 7em;
+  }
+}
+
+/*navbar */
+
+.navbar {
+  border-top: 1px solid var(--mainWhite);
+  border-bottom: 1px solid var(--mainWhite);
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  font-size: 1.2em;
+  z-index: 1;
+  transition: background-color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--mainBlack);
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+
+.nav-header, .nav-div {
+  display: inline-block;
+}
+
+.logo {
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  font-size: 0px;
+  transition: var(--mainTransition);
+  -webkit-transition: var(--mainTransition);
+  -moz-transition: var(--mainTransition);
+  -ms-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
+}
+
+.nav-logo {
+  width: initial;
+  height: initial;
+  display: inline-block;
+  overflow: visible;
+  font-size: 2em;
+}
+
+.logo a {
+  color: var(--mainWhite);
+}
+
+.logo, .nav-logo a:hover {
+  text-decoration: none;
+}
+
+.nav-btn {
+  display: none;
+}
+
+.nav-div ul .nav-links {
+  display: inline-block;
+  padding: 5px 1.5em;
+}
+
+.nav-div ul .nav-links a {
+  color: white;
+}
+
+.nav-div ul .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links .active {
+  color: var(--roseRed)
+}
+
+@media screen and (max-width: 768px) {
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    width: initial;
+    height: initial;
+    display: inline-block;
+    overflow: visible;
+    font-size: 1.5em;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    padding: 0.5em;
+    background-color: var(--mainBlack);
+    display: block;
+    border: none;
+  }
+  .nav-btn {
+    display: inline-block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  .nav-icon {
+    font-size: 2.0em;
+    color: var(--mainWhite);
+    color: var(--serenity);
+  }
+  .nav-div {
+    height: 0;
+    overflow: hidden;
+    transition: var(--mainTransition);
+    list-style-type: none;
+  }
+  .show-nav {
+    height: 9em;
+  }
+  .nav-div, .navbar ul {
+    display: block;
+    width: 100%;
+  }
+  .nav-div ul .nav-links {
+    display: block;
+    padding: 0.4em 0;
+    color: var(--mainBlack);
+    transition: var(--mainTransition);
+    text-align: center;
+    font-size: 1em;
+  }
 }
 
 /*Title*/
@@ -249,7 +306,6 @@ header .catchPhrase {
 .offer {
   flex: 1 1 260px;
   margin: 1em 1em;
-  margin-right: 0.5em;
   max-width: 320px;
   min-width: 260px;
   border: 1px solid #e5e5e5;
@@ -312,6 +368,21 @@ header .catchPhrase {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+
+  .offer {
+    padding:0.5em;
+  }
+  .offer p {
+    width: initial;
+    height: initial;
+  }
+
+  .offers-text p {
+    font-size: 1.1em;
+  }
+}
+
 /*AuthPage**/
 
 .main {
@@ -342,12 +413,13 @@ div.form-wrapper {
 div.form-section>h1, div.form-section>p {
   text-align: center;
 }
+
 div.form-wrapper a {
   text-decoration: none;
   color: rgb(55, 142, 240);
 }
 
-div.form-section> p a:hover{
+div.form-section>p a:hover {
   text-decoration: underline;
 }
 
@@ -392,14 +464,13 @@ small a:hover {
   text-decoration: underline;
 }
 
-@media(max-width: 768px){
-  div.form-wrapper{
+@media(max-width: 768px) {
+  div.form-wrapper {
     margin: 0 auto;
   }
 }
+
 /*AuthPage Login**/
-
-
 
 div.login-center {
   margin-top: 3em;
