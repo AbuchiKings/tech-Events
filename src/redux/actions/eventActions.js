@@ -1,7 +1,8 @@
 import * as eventsApi from './../../eventsApi';
+import * as types from './actionTypes'
 
 export function getFeaturedEventsSuccess(featuredEvents) {
-    return { type: "LOAD_FEATURED_EVENTS_SUCCESS", featuredEvents: featuredEvents }
+    return { type: types.GET_FEATURED_EVENTS_SUCCESS, featuredEvents: featuredEvents }
 }
 
 export function getFeaturedEvents() {
