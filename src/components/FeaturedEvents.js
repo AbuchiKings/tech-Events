@@ -5,6 +5,7 @@ import * as eventActions from '../redux/actions/eventActions';
 import PropTypes from 'prop-types';
 import Title from './Title';
 import SingleEvent from './SingleEvent';
+import { Link } from 'react-router-dom';
 
  function FeaturedEvents({dispatch, featuredEvents}) {
     
@@ -23,6 +24,7 @@ import SingleEvent from './SingleEvent';
                     return <SingleEvent data={event} key={event.id}/>
                 })}
             </div>
+            <Link to="/events" className="more btn-primary"> See More</Link>
         </section>
     )
 }

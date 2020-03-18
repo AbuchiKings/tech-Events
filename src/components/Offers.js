@@ -37,26 +37,23 @@ function Offers() {
 
     return (
         <section className="offers-section">
-            <Title title="What we offer" />
-            <div className="offers-center">
-                {offers.map((item, i) => {
-                    return (
-                        <article key={i} className="offer">
-                            <span>{item.icon}</span>
-                            <h4>{item.title}</h4>
-                            <p>{item.info}</p>
-                        </article>
-                    )
-                })}
+            <div className="offers-first">
+                <Title title="What we offer" />
+                <div className="offers-center">
+                    {offers.map((item, i) => {
+                        return (
+                            <article key={i} className="offer">
+                                <span>{item.icon}</span>
+                                <h4>{item.title}</h4>
+                                <p>{item.info}</p>
+                            </article>
+                        )
+                    })}
 
-                <i aria-hidden="true"></i>
-                <i aria-hidden="true"></i>
-                <i aria-hidden="true"></i>
-                <i aria-hidden="true"></i>
-                <i aria-hidden="true"></i>
-                <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                </div>
             </div>
-
             <div className="offers-text">
                 <h3>Why us?</h3>
                 <p>

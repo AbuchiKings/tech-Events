@@ -1,3 +1,9 @@
+import img1 from './images/angularconnect-shield.png'
+import img2 from './images/reactathon.jpg'
+import img3 from './images/ng-conf.png'
+import img4 from './images/basic-shield.png'
+import img5 from './images/ng-vegas.png'
+
 export default [
     {
       id: 1,
@@ -5,8 +11,7 @@ export default [
       date: new Date('9/26/2036'),
       time: '10:00 am',
       price: 599.99,
-      featured: true,
-      imageUrl: './images/angularconnect-shield.png',
+      imageUrl: img1,
       location: {
         address: '1057 DT',
         city: 'London',
@@ -85,7 +90,7 @@ export default [
       time: '9:00 am',
       price: 950.00,
       featured: true,
-      imageUrl: './images/ng-nl.png',
+      imageUrl: img2,
       onlineUrl: 'http://ng-nl.org/',
       sessions: [
         {
@@ -141,7 +146,7 @@ export default [
       date: new Date('5/4/2037'),
       time: '9:00 am',
       price: 759.00,
-      imageUrl: './images/ng-conf.png',
+      imageUrl: img3,
       location: {
         address: 'The Palatial America Hotel',
         city: 'Salt Lake City',
@@ -223,7 +228,8 @@ export default [
       date: new Date('6/10/2037'),
       time: '8:00 am',
       price: 800.00,
-      imageUrl: './images/basic-shield.png',
+      featured: true,
+      imageUrl: img4,
       location: {
         address: 'The UN Angular Center',
         city: 'New York',
@@ -273,7 +279,7 @@ export default [
       time: '9:00 am',
       price: 400.00,
       featured: true,
-      imageUrl: './images/ng-vegas.png',
+      imageUrl: img5,
       location: {
         address: 'The Excalibur',
         city: 'Las Vegas',
