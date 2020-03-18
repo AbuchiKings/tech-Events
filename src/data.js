@@ -5,6 +5,7 @@ export default [
       date: new Date('9/26/2036'),
       time: '10:00 am',
       price: 599.99,
+      featured: true,
       imageUrl: '/assets/images/angularconnect-shield.png',
       location: {
         address: '1057 DT',
@@ -83,6 +84,7 @@ export default [
       date: new Date('4/15/2037'),
       time: '9:00 am',
       price: 950.00,
+      featured: true,
       imageUrl: '/assets/images/ng-nl.png',
       onlineUrl: 'http://ng-nl.org/',
       sessions: [
@@ -270,6 +272,7 @@ export default [
       date: new Date('2/10/2037'),
       time: '9:00 am',
       price: 400.00,
+      featured: true,
       imageUrl: '/assets/images/ng-vegas.png',
       location: {
         address: 'The Excalibur',
