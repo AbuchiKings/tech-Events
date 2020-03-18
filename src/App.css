@@ -292,9 +292,35 @@ header .catchPhrase {
   margin: 0 auto;
 }
 
+/* End of Title */
+
+/* event */
+
+.event {
+  flex: 1 1 260px;
+  margin: 1em 1em;
+  max-width: 320px;
+  min-width: 260px;
+  border: 1px solid #e5e5e5;
+  padding: 1em 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* end of event */
+
+/* FeaturedEvents */
+
+.featured-events-center a {
+  color: black;
+}
+
+/* End of FeaturedEvents */
+
 /*offers*/
 
-.offers-center {
+.featured-events-center, .offers-center {
   width: 90vw;
   margin: 1.5em auto;
   display: flex;
@@ -303,8 +329,9 @@ header .catchPhrase {
   text-align: center;
 }
 
-.offer {
+ .offer {
   flex: 1 1 260px;
+  color: black;
   margin: 1em 1em;
   max-width: 320px;
   min-width: 260px;
@@ -369,15 +396,13 @@ header .catchPhrase {
 }
 
 @media screen and (max-width: 768px) {
-
   .offer {
-    padding:0.5em;
+    padding: 0.5em;
   }
   .offer p {
     width: initial;
     height: initial;
   }
-
   .offers-text p {
     font-size: 1.1em;
   }
