@@ -13,9 +13,9 @@ export default function SingleEvent({ data }) {
                     <div className="info-container">
                         <p className="event-date">{data.time}</p>
                         <p className='event-name'>{data.name}</p>
-                        <p className='event-location'>{`${data.location?.address},
-                     ${data.location?.city}, ${data.location?.country}`}</p>
-                        <p className='event-price'>{data.price}</p>
+                        <p className='event-location'>{data.location ? `${data.location?.address},
+                     ${data.location?.city}, ${data.location?.country}` : data.onlineUrl}</p>
+                        <p className='event-price'>{isNaN(data.price) ? data.price : '$' + data.price}</p>
                     </div>
                 </div>
             </Link>

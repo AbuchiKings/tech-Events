@@ -7,21 +7,21 @@ import Title from './Title';
 import SingleEvent from './SingleEvent';
 import { Link } from 'react-router-dom';
 
- function FeaturedEvents({dispatch, featuredEvents}) {
-    
+function FeaturedEvents({ dispatch, featuredEvents }) {
+
     useEffect(() => {
         if (featuredEvents.length === 0) {
             dispatch(eventActions.getFeaturedEvents());
-        }        
+        }
     });
     console.log(featuredEvents)
 
     return (
         <section className="featured-events">
-            <Title title="featured events"/>
+            <Title title="featured events" />
             <div className="featured-events-center">
                 {featuredEvents.map(event => {
-                    return <SingleEvent data={event} key={event.id}/>
+                    return <SingleEvent data={event} key={event.id} />
                 })}
             </div>
             <Link to="/events" className="more btn-primary"> See More</Link>

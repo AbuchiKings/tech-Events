@@ -2,7 +2,7 @@ import img1 from './images/angularconnect-shield.png'
 import img2 from './images/reactathon.jpg'
 import img3 from './images/ng-conf.png'
 import img4 from './images/basic-shield.png'
-import img5 from './images/ng-vegas.png'
+import img5 from './images/ng-conf.png'
 
 export default [
     {
