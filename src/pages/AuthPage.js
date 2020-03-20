@@ -4,9 +4,7 @@ import { Link, Switch, Route, Redirect } from 'react-router-dom';
 import SignUp from './../components/SignUp';
 
 function AuthPage(props) {
-    console.log(props.location.pathname)
     const { pathname } = props.location;
-    console.log(pathname);
     return (
         <main className="main">
             <div className="form-wrapper">

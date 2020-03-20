@@ -1,10 +1,12 @@
 import React from 'react'
+import Navbar from './../components/Navbar';
+import { Link } from 'react-router-dom';
 
-function EventsList() {
+function EventsList(props) {
+    console.log(props)
     return (
-        <div>
-           EventsList  Works
-        </div>
+        <>
+        </>
     )
 }
 

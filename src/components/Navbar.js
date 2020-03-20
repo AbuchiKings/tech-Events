@@ -6,6 +6,7 @@ import { useState, useRef, useEffect } from 'react';
 
 
 export default function Navbar(props) {
+    console.log(props);
     const [displayAppName, setDisplayAppName] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
 
@@ -40,7 +41,7 @@ export default function Navbar(props) {
     }
 
     return (
-        <nav className="navbar" ref={navRef}>
+        <nav className={ props.fixed || "navbar" } ref={navRef}>
             <div className="nav-header">
 
                 <p className={props.displayNav ||

@@ -14,7 +14,6 @@ function FeaturedEvents({ dispatch, featuredEvents }) {
             dispatch(eventActions.getFeaturedEvents());
         }
     });
-    console.log(featuredEvents)
 
     return (
         <section className="featured-events">
