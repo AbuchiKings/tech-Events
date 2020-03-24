@@ -10,7 +10,7 @@ class Header extends Component {
             <>
                 <header>
                     <h1>tech<span className="roseRed">Events</span></h1>
-                    <Navbar/>
+                    <Navbar fixed="navbar"/>
 
                     <div>
                         <p className="catchPhrase">
@@ -19,7 +19,7 @@ class Header extends Component {
                     </p>
 
 
-                        <NavLink className="btn-primary" to="/auth/sign-up">Get Started</NavLink>
+                        <NavLink  className="btn-primary" to="/auth/sign-up">Get Started</NavLink>
                     </div>
                 </header>
             </>

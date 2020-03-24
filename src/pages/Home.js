@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
 import Offers from '../components/Offers';
 import Footer from './../components/Footer';
 import FeaturedEvents from './../components/FeaturedEvents';

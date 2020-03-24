@@ -22,7 +22,7 @@ function App(props) {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route  path="/events/:slug" component={EventPage} />
-        <Route  path="/events" component={EventsList} />
+        <Route  exact path="/events" component={EventsList} />
         <Route exact path="/create-event" component={CreateEvent} />
         <Route path="/auth" component={AuthPage} />
 

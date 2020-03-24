@@ -3,15 +3,14 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { FaAlignJustify } from 'react-icons/fa';
 import { useState, useRef, useEffect } from 'react';
+import  PropTypes  from 'prop-types';
 
 
 export default function Navbar(props) {
-    console.log(props);
     const [displayAppName, setDisplayAppName] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
 
     const navRef = useRef(null);
-
     const stickyNavbar = () => {
         const navbar = navRef.current;
         if (navbar) {
@@ -41,7 +40,7 @@ export default function Navbar(props) {
     }
 
     return (
-        <nav className={ props.fixed || "navbar" } ref={navRef}>
+        <nav className={props.fixed} ref={navRef}>
             <div className="nav-header">
 
                 <p className={props.displayNav ||
@@ -58,7 +57,7 @@ export default function Navbar(props) {
                 <ul>
 
                     <li className="nav-links">
-                        <NavLink to="/" activeClassName="active">Home</NavLink>
+                        <NavLink to="/" activeClassName="active" exact>Home</NavLink>
                     </li>
                     <li className="nav-links">
                         <NavLink to="/events" activeClassName="active">Events</NavLink>
@@ -78,7 +77,9 @@ export default function Navbar(props) {
 
 }
 
-
+Navbar.propTypes = {
+    fixed: PropTypes.string.isRequired
+}
 
 
 // import React, { Component } from 'react'

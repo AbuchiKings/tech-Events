@@ -64,7 +64,6 @@ h6 {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 a:hover {
@@ -162,6 +161,7 @@ header .catchPhrase {
   display: flex;
   justify-content: space-between;
   border: none;
+  width: 100%;
 }
 
 .nav-header, .nav-div {
@@ -205,8 +205,16 @@ header .catchPhrase {
   padding: 5px 1.5em;
 }
 
-.nav-div ul .nav-links a {
+.nav-links a {
   color: white;
+}
+
+.navbar .nav-links a {
+  font-size: 0.84em;
+}
+
+.sticky .nav-links a {
+  font-size: 0.84em;
 }
 
 .nav-div ul .nav-links a:hover {
@@ -408,7 +416,6 @@ header .catchPhrase {
   text-decoration: none;
   color: var(--charcoal);
 }
-
 
 /* End of FeaturedEvents */
 
