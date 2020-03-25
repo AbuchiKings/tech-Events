@@ -5,16 +5,20 @@ export function getFeaturedEventsSuccess(featuredEvents) {
     return { type: types.GET_FEATURED_EVENTS_SUCCESS, featuredEvents: featuredEvents }
 }
 
-export function getEventsSuccess(events){
-    return {type = types.GET_EVENTS_SUCCESS, events: events}
+export function getEventsSuccess(events) {
+    return { type: types.GET_EVENTS_SUCCESS, events: events }
 }
 
 export function getFeaturedEvents() {
-    return getFeaturedEventsSuccess(eventsApi.getFeaturedEvents());
+    debugger;
+    return (dispatch) => {
+        const featuredEvents = eventsApi.getFeaturedEvents()
+        return dispatch(getFeaturedEventsSuccess(featuredEvents))
 
+    }
 }
 
-export function getEvents(){
+export function getEvents() {
     return getEventsSuccess(eventsApi.getEvents());
 }
 // export function getFeaturedEvents() {

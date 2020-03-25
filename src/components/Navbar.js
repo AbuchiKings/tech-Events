@@ -8,9 +8,10 @@ import  PropTypes  from 'prop-types';
 
 export default function Navbar(props) {
     const [displayAppName, setDisplayAppName] = useState(false)
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
 
     const navRef = useRef(null);
+    console.log(props)
     const stickyNavbar = () => {
         const navbar = navRef.current;
         if (navbar) {

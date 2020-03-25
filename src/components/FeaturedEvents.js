@@ -6,12 +6,13 @@ import PropTypes from 'prop-types';
 import Title from './Title';
 import SingleEvent from './SingleEvent';
 import { Link } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
 
-function FeaturedEvents({ dispatch, featuredEvents }) {
+function FeaturedEvents({ actions, featuredEvents }) {
 
     useEffect(() => {
         if (featuredEvents.length === 0) {
-            dispatch(eventActions.getFeaturedEvents());
+            actions.getFeaturedEvents();
         }
     });
 
@@ -30,7 +31,7 @@ function FeaturedEvents({ dispatch, featuredEvents }) {
 
 
 FeaturedEvents.propTypes = {
-    dispatch: PropTypes.func.isRequired
+    actions: PropTypes.object.isRequired
 }
 
 function mapStateToProps(state) {
@@ -38,4 +39,10 @@ function mapStateToProps(state) {
         featuredEvents: state.featuredEvents
     }
 }
-export default connect(mapStateToProps)(FeaturedEvents)
+
+function mapDispatchToProps(dispatch){
+    return {
+        actions: bindActionCreators(eventActions, dispatch)
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(FeaturedEvents)
