@@ -10,7 +10,7 @@ class Header extends Component {
             <>
                 <header>
                     <h1>tech<span className="roseRed">Events</span></h1>
-                    <Navbar fixed="navbar"/>
+                    <Navbar classes="navbar" pathname={this.props.pathname}/>
 
                     <div>
                         <p className="catchPhrase">

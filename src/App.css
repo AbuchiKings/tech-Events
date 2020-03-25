@@ -306,8 +306,8 @@ header .catchPhrase {
 .event {
   flex: 1 1 260px;
   position: relative;
-  margin: 1em 1em;
-  max-width: 300px;
+  margin: 0.5em 0.5em;
+  max-width: 280px;
   min-width: 260px;
   box-shadow: var(--lightShadow);
   padding: 0.7em 0.5em;
@@ -322,6 +322,11 @@ header .catchPhrase {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.event a {
+  text-decoration: none;
+  color: black;
 }
 
 .event img {
@@ -370,7 +375,8 @@ header .catchPhrase {
 
 .featured-events {
   margin: 7em auto;
-  width: 90vw;
+  width: 100%;
+  padding: 20px;
 }
 
 .featured-events .section-title {
@@ -392,15 +398,25 @@ header .catchPhrase {
   text-align: center;
 }
 
-.featured-events-center a {
-  color: black;
-  text-decoration: none;
+.featured-events-center i {
+  flex: 1 1 260px;
+  position: relative;
+  margin: 0.5em 0.5em;
+  max-width: 280px;
+  min-width: 260px;
+  display: none;
+}
+
+@media screen and (max-width: 920px) {
+  .featured-events-center i {
+    display: block;
+  }
 }
 
 .featured-events a.more {
   font-size: 1.1em;
   max-width: 280px;
-  margin: 2.5em auto 0;
+  margin: 2em auto 0;
   text-align: center;
   padding: 0.5em 1em;
   display: block;
@@ -420,13 +436,16 @@ header .catchPhrase {
 /* End of FeaturedEvents */
 
 /*offers*/
-
+.offers-section{
+  width: 100%;
+  padding: 20px
+}
 .offers-first {
   margin-bottom: 4em;
 }
 
 .offers-center {
-  width: 90vw;
+  width: 100%;
   margin: 1.9em auto;
   display: flex;
   flex-wrap: wrap;
@@ -444,7 +463,7 @@ header .catchPhrase {
   padding: 5em 0.5em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .offer span {
@@ -512,6 +531,29 @@ header .catchPhrase {
     font-size: 1.1em;
   }
 }
+
+/* eventslists**/
+
+.events {
+  padding: 5px 20px;
+}
+
+.events-container {
+  margin: 7em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.events-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-row-gap: 1rem;
+  grid-column-gap: 1em;
+}
+
+/**end of eventslists*/
 
 /*AuthPage**/
 
@@ -685,8 +727,9 @@ footer .footer-about p {
   color: var(--serenity);
 }
 
-footer .footer-about h5 span {
+footer .footer-about h5 a {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
+  color: var(--mainWhite);
 }
 
 footer .footer-quick-links {
@@ -788,7 +831,7 @@ footer small a:hover {
   color: var(--mainWhite);
 }
 
-@media(max-width: 991px) {
+@media(max-width: 890px) {
   footer {
     padding: 6em 0;
   }

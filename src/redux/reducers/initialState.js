@@ -1,11 +1,7 @@
-const state = {
-    eventsList: {
-        events: [],
-        isloading: false,
-        message: ''
-    },
-
-    user:{
+export default {
+    events: [],
+    featuredEvents: [],
+    user: {
         isloggedIn: false,
         firstName: undefined,
         lastName: undefined,

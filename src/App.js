@@ -10,12 +10,11 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 
 function App(props) {
-  console.log(props);
   const { pathname } = props.location;
-  const homepage = pathname === '/' && <Header />
+  const homepage = pathname === '/' && <Header pathname={pathname}/>
   const paths = pathname.split('/')
   const otherpages = !paths.includes('auth')
-    && <Navbar fixed="sticky navbar" displayNav="nav-logo logo" />
+    && <Navbar pathname={pathname} classes="sticky navbar" displayNav="nav-logo logo" />
   return (
     <>
       {homepage || otherpages}

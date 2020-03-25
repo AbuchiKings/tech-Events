@@ -9,8 +9,9 @@ export function getEventsSuccess(events) {
     return { type: types.GET_EVENTS_SUCCESS, events: events }
 }
 
+
+
 export function getFeaturedEvents() {
-    debugger;
     return (dispatch) => {
         const featuredEvents = eventsApi.getFeaturedEvents()
         return dispatch(getFeaturedEventsSuccess(featuredEvents))
@@ -19,7 +20,10 @@ export function getFeaturedEvents() {
 }
 
 export function getEvents() {
-    return getEventsSuccess(eventsApi.getEvents());
+    return (dispatch) => {
+        const events = eventsApi.getEvents();
+        return dispatch(getEventsSuccess(events))
+    }
 }
 // export function getFeaturedEvents() {
 //     return function(dispatch) {
