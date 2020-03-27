@@ -436,10 +436,12 @@ header .catchPhrase {
 /* End of FeaturedEvents */
 
 /*offers*/
-.offers-section{
+
+.offers-section {
   width: 100%;
   padding: 20px
 }
+
 .offers-first {
   margin-bottom: 4em;
 }
@@ -536,10 +538,50 @@ header .catchPhrase {
 
 .events {
   padding: 5px 20px;
+  margin: 7em auto;
+  position: relative;
+}
+
+.search-icon {
+  font-size: 2em;
+  position: absolute;
+  background-color: #fff;
+  bottom: 13px;
+  left: 0;
+}
+
+form.events-search {
+  background-color: #fff;
+  position: relative;
+  padding: 10px 0;
+  width: 30%;
+  min-width: 260px;
+  border-bottom: 1px solid rgb( 234, 234, 234);
+  transition: border-color 0.23s ease-in-out 0s, box-shadow 0.23s ease-in-out 0s;
+}
+
+form.events-search input {
+  padding: 0.5em;
+  display: block;
+  margin: auto;
+  width: 75%;
+  margin-left: auto;
+  border: none;
+  font-size: 1em;
+  background-color: #fff;
+  outline: none;
+}
+
+form.events-search:hover {
+  border-bottom-color: rgb(100, 100, 100);
+}
+
+form.events-search input:focus {
+  border-left: 1px solid rgb( 200, 200, 200);
 }
 
 .events-container {
-  margin: 7em auto;
+  margin: 3em auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

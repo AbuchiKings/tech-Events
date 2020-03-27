@@ -5,6 +5,8 @@ import * as eventActions from '../redux/actions/eventActions';
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
 import SingleEvent from './../components/SingleEvent';
+import { FaSistrix } from 'react-icons/fa';
+
 
 function EventsList({ getEvents, events }) {
     console.log()
@@ -16,10 +18,12 @@ function EventsList({ getEvents, events }) {
     return (
         <>
             <div className="events">
-            <form action="">
-                <input type="search"/>
-            </form>
-                <Filter />
+
+                <form className="events-search" action="">
+                    <FaSistrix className="search-icon" />
+                    <input type="search" />
+                </form>
+
                 <div className="events-container">
                     {events.map(event => {
                         return <SingleEvent data={event} key={event.id} />
